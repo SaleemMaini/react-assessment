@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import Layout from "./components/Layout/Layout";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <Fragment>
-      <Layout />
+      <Home />
     </Fragment>
   );
 };

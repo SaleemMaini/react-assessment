@@ -1,0 +1,9 @@
+.main-container {
+  display: grid;
+  height: 80vh;
+  grid-template-columns: 1fr 1fr 0.1fr;
+  grid-template-areas: "mainSection questionsSection sidebarBtn";
+  gap: 5px 10px;
+  grid-area: main;
+  margin: 15px;
+}

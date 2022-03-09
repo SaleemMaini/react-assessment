@@ -1,0 +1,29 @@
+.main-section {
+  grid-area: mainSection;
+  height: 80vh;
+  padding: 15px;
+}
+
+.main-section .content {
+  height: 100%;
+  padding-left: 10px;
+  overflow-y: scroll;
+}
+.content::-webkit-scrollbar-track {
+  margin-top: 40px;
+}
+
+.main-section .content h2,
+.main-section .content p {
+  padding: 5px 10px;
+}
+
+
+.main-section .content p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.main-section .content img {
+  width: 100%;
+}

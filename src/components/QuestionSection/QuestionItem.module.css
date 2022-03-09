@@ -1,0 +1,12 @@
+.question-item {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+
+}
+.question-item:hover {
+  border: 1px solid var(--mainColor)
+}
+.question-item * {
+  padding: 5px 0;
+}

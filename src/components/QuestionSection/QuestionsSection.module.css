@@ -1,6 +1,6 @@
 .questionsSection {
   grid-area: questionsSection;
-  background-color: aqua;
+  background-color: transparent !important;
   overflow-y: scroll;
-  padding: 10px;
+  padding: 0 10px;
 }
