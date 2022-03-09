@@ -1,8 +1,13 @@
 import React from "react";
 import classes from "./SideBarButton.module.css";
-const SideBarButton = () => {
+const SideBarButton = (props) => {
   return (
-    <button type="button" className={classes.floatBtn}>
+    <button
+      type="button"
+      className={classes.floatBtn}
+      onClick={props.toggleSideBar}
+      style={props.style}
+    >
       Side
     </button>
   );
