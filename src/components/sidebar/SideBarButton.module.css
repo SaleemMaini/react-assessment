@@ -1,3 +1,15 @@
-.sidebar-btn {
-    grid-area: sidebarBtn;
+.floatBtn {
+  position: fixed;
+  left: 0;
+  height: 50px;
+  outline: 0;
+  border: 0;
+  width: 70px;
+  background-color: var(--mainColor);
+  color: white;
+  border-radius: 0 10px 10px 0px;
+}
+
+.floatBtn:hover {
+  cursor: pointer;
 }

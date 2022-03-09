@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import classes from "./SideBarButton.module.css";
 const SideBarButton = () => {
   return (
-    <div>Side</div>
-  )
-}
+    <button type="button" className={classes.floatBtn}>
+      Side
+    </button>
+  );
+};
 
-export default SideBarButton
+export default SideBarButton;
