@@ -11,7 +11,11 @@ const QuestionsSection = () => {
   const [question3Answer, setQuestion3Answer] = useState("");
 
   const question1TextAreaChangeHandler = (e) => {
-    setQuestion1Answer(e.target.value);
+    if (e.target.value.length <= 100) {
+      setQuestion1Answer(e.target.value);
+    } else {
+      return;
+    }
   };
 
   const question2ChangeHandler = (e) => {
@@ -19,7 +23,11 @@ const QuestionsSection = () => {
   };
 
   const question3TextAreaChangeHandler = (e) => {
-    setQuestion3Answer(e.target.value);
+    if (e.target.value.length <= 150) {
+      setQuestion3Answer(e.target.value);
+    } else {
+      return;
+    }
   };
   return (
     <Card className={classes.questionsSection}>
@@ -33,9 +41,9 @@ const QuestionsSection = () => {
           label="اجابتك"
           id="question1"
           placeholder="اكتب هنا..."
-          maxLength={100}
           onChange={question1TextAreaChangeHandler}
           value={question1Answer}
+          maxLength={100}
         />
       </QuestionItem>
       {/* QUESTION 2 */}

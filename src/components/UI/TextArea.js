@@ -9,6 +9,7 @@ const TextArea = (props) => {
         placeholder={props.placeholder}
         maxLength={props.maxLength}
         onChange={props.onChange}
+        disabled={props.disabled}
       />
       <span>{props.maxLength}/{props.value.length}</span>
     </div>
