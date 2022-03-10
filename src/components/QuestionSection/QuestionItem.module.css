@@ -1,7 +1,10 @@
 .question-item {
   padding: 10px 20px;
-  margin-bottom: 20px;
   border: 1px solid transparent;
+}
+
+.question-item:not(:last-child) {
+  margin-bottom: 20px;
 
 }
 .question-item:hover {

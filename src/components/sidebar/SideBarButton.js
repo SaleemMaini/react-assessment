@@ -8,7 +8,7 @@ const SideBarButton = (props) => {
       onClick={props.toggleSideBar}
       style={props.style}
     >
-      Side
+      Side Bar
     </button>
   );
 };

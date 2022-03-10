@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 import classes from "./SideBar.module.css";
 import { CSSTransition } from "react-transition-group";
 const SideBar = (props) => {
+  const sidebarRef = useRef();
   return (
     <CSSTransition
       mountOnEnter
       unmountOnExit
+      nodeRef={sidebarRef}
       in={props.sideBarIsVisible}
       timeout={600}
       classNames={{
@@ -13,7 +15,10 @@ const SideBar = (props) => {
         exitActive: classes["slide-exit-active"],
       }}
     >
-      <div className={`${classes.sidebar} ${classes["slide-to-right"]}`}>
+      <div
+        className={`${classes.sidebar} ${classes["slide-to-right"]}`}
+        ref={sidebarRef}
+      >
         <div className={classes["sidebar-header"]}>
           <h2>الملحق</h2>
           <button type="button" onClick={props.toggleSideBar}>

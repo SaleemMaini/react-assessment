@@ -1,15 +1,24 @@
 .floatBtn {
   position: fixed;
-  left: 0;
+  bottom: 20px;
   height: 50px;
-  outline: 0;
-  border: 0;
-  width: 70px;
+  left: 50%;
+  width: 80%;
+  margin-left: -40%;
   background-color: var(--mainColor);
   color: white;
-  border-radius: 0 10px 10px 0px;
+  border-radius: 10px;
+  outline: 0;
+  border: 0;
 }
 
-.floatBtn:hover {
-  cursor: pointer;
+@media (min-width: 480px) {
+  .floatBtn {
+    left: 0;
+    margin-left: 0;
+    top: 10%;
+    width: 90px;
+    height: 50px;
+    border-radius: 0 10px 10px 0px;
+  }
 }

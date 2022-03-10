@@ -4,4 +4,5 @@
     "header" auto
     "main" 1fr
     "footer" auto;
+    height: 100vh;
 }

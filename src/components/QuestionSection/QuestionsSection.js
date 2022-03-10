@@ -4,18 +4,23 @@ import Card from "../UI/Card";
 import QuestionItem from "./QuestionItem";
 import TextArea from "../UI/TextArea";
 import RadioInput from "../UI/RadioInput";
+
 const QuestionsSection = () => {
-  const [s, setS] = useState("");
-  const [s2, setS2] = useState("");
+  const [question1Answer, setQuestion1Answer] = useState("");
+  const [question2Answer, setQuestion2Answer] = useState("");
+  const [question3Answer, setQuestion3Answer] = useState("");
 
   const question1TextAreaChangeHandler = (e) => {
-    setS(e.target.value);
-  };
-  
-  const question3TextAreaChangeHandler = (e) => {
-    setS2(e.target.value);
+    setQuestion1Answer(e.target.value);
   };
 
+  const question2ChangeHandler = (e) => {
+    setQuestion2Answer(e.target.value);
+  };
+
+  const question3TextAreaChangeHandler = (e) => {
+    setQuestion3Answer(e.target.value);
+  };
   return (
     <Card className={classes.questionsSection}>
       {/* QUESTION 1 */}
@@ -30,7 +35,7 @@ const QuestionsSection = () => {
           placeholder="اكتب هنا..."
           maxLength={100}
           onChange={question1TextAreaChangeHandler}
-          value={s}
+          value={question1Answer}
         />
       </QuestionItem>
       {/* QUESTION 2 */}
@@ -40,6 +45,7 @@ const QuestionsSection = () => {
             id: "question2Option1",
             name: "question2",
             value: "question2Option1",
+            onChange: question2ChangeHandler,
           }}
           label={
             "برامج النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم"
@@ -50,6 +56,7 @@ const QuestionsSection = () => {
             id: "question2Option2",
             name: "question2",
             value: "question2Option2",
+            onChange: question2ChangeHandler,
           }}
           label={"وجد محتوى نصي فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء"}
         />
@@ -58,6 +65,7 @@ const QuestionsSection = () => {
             id: "question2Option3",
             name: "question2",
             value: "question2Option3",
+            onChange: question2ChangeHandler,
           }}
           label={"قامت مطبعة مجهولة برص مجموعة من الأحرف"}
         />
@@ -71,7 +79,7 @@ const QuestionsSection = () => {
           placeholder="اكتب هنا..."
           maxLength={150}
           onChange={question3TextAreaChangeHandler}
-          value={s2}
+          value={question3Answer}
         />
       </QuestionItem>
     </Card>

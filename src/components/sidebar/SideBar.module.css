@@ -1,19 +1,43 @@
 .sidebar {
   position: fixed;
-  left: 0;
   height: 500px;
-  width: 50%;
+  left: 50%;
+  width: 80%;
+  bottom: 0;
+  margin-left: -40%;
   background-color: white;
-  border-radius: 0 10px 10px 0px;
+  border-radius: 10px 10px 0 0;
+}
+
+@media (min-width: 480px) {
+  .sidebar {
+    left: 0;
+    margin-left: 0;
+    width: 50%;
+    top: 10%;
+    border-radius: 0 10px 10px 0px;
+  }
 }
 
 .slide-enter-active {
-  animation: slide-to-right 0.6s ease-out;
-}
-.slide-exit-active {
-  animation: slide-to-left 0.6s ease-out;
+  animation: slide-to-top 0.6s ease-out;
 }
 
+@media (min-width: 480px) {
+  .slide-enter-active {
+    animation: slide-to-right 0.6s ease-out;
+  }
+}
+
+.slide-exit-active {
+  animation: slide-to-bottom 0.6s ease-out;
+}
+
+@media (min-width: 480px) {
+  .slide-exit-active {
+    animation: slide-to-left 0.6s ease-out;
+  }
+}
 @keyframes slide-to-right {
   from {
     transform: translateX(-100%);
@@ -30,19 +54,41 @@
     transform: translateX(-100%);
   }
 }
+@keyframes slide-to-top {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes slide-to-bottom {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
 
 .sidebar-header {
-  position: sticky;
   top: 0;
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: var(--mainColor);
-  border-radius: 0 10px 10px 0px;
+  border-radius: 10px;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 20px 20px 80px;
+  padding: 20px;
+}
+
+@media (min-width: 480px) {
+  .sidebar-header {
+    border-radius: 0 10px 10px 0px;
+    padding: 20px 20px 20px 80px;
+  }
 }
 .sidebar-header button {
   background-color: transparent;
@@ -57,11 +103,17 @@ button:hover {
   cursor: pointer;
 }
 .sidebar-body {
-  padding: 20px 20px 20px 80px;
+  padding: 20px;
+}
+
+@media (min-width: 480px) {
+  .sidebar-body {
+    padding: 20px 20px 20px 80px;
+  }
 }
 .sidebar-body ul {
   list-style: none;
-  height: 350px;
+  height: 90%;
   overflow-y: scroll;
   direction: ltr;
   padding-right: 10px;
@@ -78,6 +130,7 @@ button:hover {
   margin-bottom: 20px;
   direction: rtl;
 }
+
 .sidebar-body ul li button {
   background-color: transparent;
   outline: 0;
