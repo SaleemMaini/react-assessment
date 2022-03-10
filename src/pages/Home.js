@@ -8,6 +8,7 @@ import SideBar from "../components/SideBar/SideBar";
 
 const Home = () => {
   const [sideBarIsVisible, setSideBarIsVisible] = useState(false);
+
   const toggleSideBarHandler = () => {
     setSideBarIsVisible((prevState) => !prevState);
   };
@@ -18,7 +19,10 @@ const Home = () => {
         <QuestionsSection />
         <MainSection />
         <SideBarButton toggleSideBar={toggleSideBarHandler} />
-        {sideBarIsVisible && <SideBar toggleSideBar={toggleSideBarHandler} />}
+        <SideBar
+          toggleSideBar={toggleSideBarHandler}
+          sideBarIsVisible={sideBarIsVisible}
+        />
       </div>
     </Layout>
   );
